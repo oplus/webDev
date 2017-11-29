@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by anonymous (http://jsbin.com/borogemoze/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+<style id="jsbin-css">
+#circle {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  background: url(https://image.freepik.com/free-photo/texture-background_1404-62.jpg);
+  filter: blur(2px);
+    transition: all 0.5;
+
+}
+    
+    #circle:hover {
+        filter: blur(0);
+    }
+
+#rect {
+  
+  height: 45px;
+  width: 90px;
+  margin: 70px auto;
+  border-radius: 10%;
+  position: relative;
+  top: 100px;
+  box-shadow: 2px 2px 3px black;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHeOaTj8ANw24TgsJgOwyWVvXXE2Mg8n6s3mvAAaVw_zjO5SVt);
+  background-size: cover;
+  
+}
+
+#rect:after {
+  position: absolute;
+  content: "";
+  height: 121px;
+  width: 2px;
+  max-width: 30px;
+  z-index: 1;
+  top: -110px;
+  transform: rotate(20deg);
+  transform-origin: 50% 0;
+  background-color: black;
+}
+#rect:before {
+  position: absolute;
+  content: "";
+  height: 121px;
+  width: 2px;
+  max-width: 30px;
+  z-index: 1;
+  top: -110px;
+  transform: rotate(-20deg);
+  transform-origin: 50% 0;
+  background-color: black;
+}
+
+
+#container {
+  position: absolute;
+  top: -100px;
+  left: 20px;
+  height: 165px;
+  transform-origin: 50% 0;
+  animation: 7s swing infinite linear;
+}
+
+
+#rect2 {
+  
+  height: 45px;
+  width: 45px;
+  margin: 70px auto;
+  border-radius: 10%;
+  position: relative;
+  top: 100px;
+  border-radius: 50%;
+  background: url(http://images.all-free-download.com/images/graphiclarge/metal_background_of_highdefinition_picture_2_169714.jpg);
+  box-shadow: 2px 2px 3px black;
+  
+}
+
+#rect2:after {
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 2px;
+  max-width: 30px;
+  z-index: 1;
+  top: -200px;
+  background-color: black;
+}
+
+#container2 {
+  position: absolute;
+  top: -40px;
+  left: 40px;
+  height: 200px;
+  transform-origin: 50% 0;
+  animation: 3s swing infinite linear;
+}
+
+@keyframes swing {
+  25% {transform: rotate(10deg);}
+  27% {transform: rotate(10deg);}
+  50% {transform: rotate(0deg);}
+  75% {transform: rotate(-10deg);}
+  77% {transform: rotate(-10deg);}
+  100% {transform: rotate(0deg);}
+  
+}
+
+
+input {
+  position: absolute;
+  top: 250px;
+  left: 45px;
+}
+
+
+</style>
+</head>
+<body>
+  <div id="circle">
+    
+    <div class="rotator" id="container"><div id="rect"></div></div>
+    <div class="rotator" id="container2"><div id="rect2"></div></div>
+  </div>
+  <input id="slider" type="range" min="1" max="7" step="any" value="4">
+  
+<script id="jsbin-javascript">
+document.getElementById("slider").oninput = function() {
+  
+  document.getElementsByClassName("rotator")[0].style.animationDuration = document.getElementById("slider").value + 2 +  "s";
+  document.getElementsByClassName("rotator")[1].style.animationDuration = document.getElementById("slider").value +  "s";
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>

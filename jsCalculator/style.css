@@ -1,0 +1,62 @@
+* {
+  
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+#buttons{
+  
+  display: flex;
+  flex-wrap: wrap;
+  width: 320px;
+  height: 190px;
+  
+
+}
+
+#container {
+  margin: 10% auto;
+  width: 320px;
+}
+
+
+#displayPanel {
+  
+  background: linear-gradient(grey, white 20%, grey);
+  display: block;
+  height: 40px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 25px;
+  overflow: none;
+  font-size: auto;
+}
+
+button { 
+
+  width: 80px;
+  border: 1px solid lightgrey;
+  outline:none;
+}
+
+button[value="."] {
+  width: 50%;
+}
+
+button[value="="] {
+  width: 50%;
+  margin: 0px auto;
+}
+
+
+button:hover {
+  
+  background-color: #29b6f6;
+}
+
+button:active {
+  
+  background-color: #26a69a;
+}
+

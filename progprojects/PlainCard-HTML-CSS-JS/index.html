@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<style>
+html {
+        padding-top:220px;
+    }
+#card {
+height:188px;
+width:350px;
+border: 0.1px solid rgba(0, 0, 0, .5);
+border-radius: 10px;
+padding-bottom: 4px;
+box-shadow: 5px 5px 5px grey;
+margin: auto
+}
+
+.photo #identification {
+height:120px;
+width:110px;
+margin: 12px 12px auto 12px;
+border-radius: 6px;
+border: None;
+border-bottom:  0.1px solid rgba(0, 0, 0, .5);
+border-left:  0.1px solid rgba(0, 0, 0, .5);
+ /*remove this later */
+
+}
+
+
+.txtinput {
+margin: 12px;
+float: right;
+height: 20px;
+border-radius: 5px;
+text-align: center;
+border: None;
+border-bottom:  0.1px solid rgba(0, 0, 0, .5);
+border-left:  0.1px solid rgba(0, 0, 0, .5);
+}
+    
+img {
+    margin:auto;
+    border-radius: 4px;
+    margin: 2px auto auto 10px;
+}
+
+#imageSelect {
+    color:transparent;
+    position: absolute;
+    margin: 50px auto auto 7px;
+}
+</style>
+<body>
+
+<div id='card'>
+<input class='txtinput' id='Name' type='text' placeholder='Name'/>
+<input class='txtinput' id='Age' type='text' placeholder='Age'/>
+<input class='txtinput' id='Sex' type='text' placeholder='Sex'/>
+<input class='txtinput' id='Occupation' type='text' placeholder='Occupation'/>
+<div class='photo'>
+<div id='identification'>
+    <img id="output" width=auto height=97%/>
+    <input id="imageSelect" type="file" accept="image/*" onchange="loadFile(event); action()"/>
+</div>
+</div>
+</div>
+
+<script>
+["Name", "Age", "Sex", "Occupation"].forEach(name => {
+
+    var x = document.getElementById(name);
+    x.addEventListener("focusin", myFocusFunction);
+    x.addEventListener("focusout", myBlurFunction);
+
+});
+
+
+function myFocusFunction() {
+    this.placeholder= '';  
+}
+
+function myBlurFunction() {
+    this.placeholder= this.getAttribute('id');  
+}
+    
+var loadFile = function(event) {
+var output = document.getElementById('output');
+output.src = URL.createObjectURL(event.target.files[0]);
+
+  };
+
+function action() {
+    document.getElementById("imageSelect").style.visibility = 'hidden';
+}
+</script>
+
+</body>
+</html>

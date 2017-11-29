@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+    
+        <style type="text/css">
+            * {
+                
+                margin: 0;
+            }
+            #shape {
+                
+                background-color: red;
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                position: absolute;
+                display: none;
+            }
+        
+        </style>
+    </head>
+    
+    <body>
+        
+
+        <p>Your time: <span id="timeTaken"></span></p>
+        <div id="shape"></div>
+        
+        <script type="text/javascript">
+            
+            
+
+           var start = new Date().getTime()
+           
+           function appearAfterDelay() {
+               
+               document.getElementById("shape").style.display = "block";
+               
+               var start = new Date().getTime()
+           }
+           
+            
+            
+           document.getElementById("shape").onclick = function() {
+            document.getElementById("shape").style.display = "none";
+               
+            var end = new Date().getTime();
+               
+            var timeTaken = end - start;
+               
+            document.getElementById("timeTaken").innerHTML = timeTaken + "s";
+               
+            }
+           
+           
+            
+        </script>
+    
+    
+    </body>
+
+
+</html>

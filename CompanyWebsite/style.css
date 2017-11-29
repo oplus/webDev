@@ -1,0 +1,95 @@
+
+* {
+    
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+    
+
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.rightItems {
+    display: inline-block;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    float: left;
+    background-image: url(pattern.jpg);
+    background-size: cover;
+    animation: 2s slideRight 5s forwards;
+    z-index: auto;
+    box-shadow: inset 2px 2px 2px 0px black;
+    z-index: 998;
+
+}
+
+
+
+.leftItems {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    float: right;
+    background-color:blue;
+    background-image: url(pattern.jpg);
+    background-size: cover;
+    animation: 2s slideLeft 5s forwards;
+    box-shadow: inset 2px 2px 2px 0px black;
+    z-index: 999;
+}
+
+
+
+.leftItems:before {
+    
+    content: "";
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    left: 100%;
+    top: 30%;
+    margin-left: -150px;
+    background-image: url(Circle_Yellow.png);
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 3;
+    animation: 2s rotateLogo 2.5s ease-in forwards;
+    transform: rotate(3deg);
+}
+
+
+#text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 1em;
+    font-weight: bolder;
+    color: red;
+}
+
+
+
+@keyframes slideLeft {
+    100% {transform: translate(-900px,0%);}
+
+}
+
+@keyframes slideRight {
+    100% {transform: translate(900px,0%);}
+
+}
+
+@keyframes rotateLogo {
+    10%  {transform: rotate(-10deg);}
+    25%  {transform: rotate(15deg);}
+    50%  {transform: rotate(-5deg);}
+    100% {transform: rotate(90deg);}
+
+}

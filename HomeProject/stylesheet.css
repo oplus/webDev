@@ -1,0 +1,88 @@
+p {
+	display: inline-block;
+	font-family: Comic Sans MS;
+	color: white;
+	font-size: 14px;
+	margin: Auto;
+}
+html {
+	background-image: url("bkg.jpg");
+}
+
+#googleimg {
+	display:block;
+    height:auto; 
+    width:auto; 
+    max-width:500px; 
+    max-height:500px;
+	margin:auto;
+	opacity:0.3;
+}
+
+/*
+table {
+	width:50%;
+	font-family: "Courier";
+	margin: auto;
+	margin-top: 150px;
+}
+*/
+
+/*icons from https://www.iconfinder.com/icons/386659/mail.ru_mailru_icon#size=128 */
+.icons {
+	display:inline-block;
+	position: relative;
+	text-align: center;
+	margin:20px;
+	margin-bottom:0px;
+	padding:0px;
+	padding-bottom:0px;
+	max-width:48px;
+}
+
+#links {
+	text-align:center;
+	margin-top:30px;
+}
+
+a {
+	color: white;
+	text-decoration: None;
+}
+
+
+input[type=text] {
+	border-radius: 7px;
+	font-family: Arial;
+	height: 22px;
+	font-size: 18px;
+	color:black;
+	text-align: center;
+	margin: auto;
+	display:block;
+	width:30%;
+	margin-top:50px;
+}
+
+#clock {
+	position:fixed;
+	bottom:0;
+	right:0;
+}
+
+
+/*blow are placeholder color difinitions*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;
+}
+
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: gray;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: gray;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: gray;
+}
